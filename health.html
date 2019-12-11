@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <title>Question</title>
+</head>
+<script type="text/javascript">
+
+    var age = localStorage.getItem("age")
+    var gender = localStorage.getItem("gender")
+
+    function no() {
+    if (age === "0" && gender === "ชาย")
+        return "boy-0-no.html";
+    else if (age === "20" && gender === "ชาย")
+        return "boy-20-no.html";
+    else if (age === "40" && gender === "ชาย")
+        return "boy-40-no.html";
+    else if (age === "60" && gender === "ชาย")
+        return "boy-60-no.html";
+    else if (age === "0" && gender === "หญิง")
+        return "girl-0-no.html";
+    else if (age === "20" && gender === "หญิง")
+        return "girl-20-no.html";
+    else if (age === "40" && gender === "หญิง")
+        return "girl-40-no.html";
+    else if (age === "60" && gender === "หญิง")
+        return "girl-60-no.html";
+    }
+
+    function yes() {
+    if (age === "0" && gender === "ชาย")
+        return "boy-0-yes.html";
+    else if (age === "20" && gender === "ชาย")
+        return "boy-20-yes.html";
+    else if (age === "40" && gender === "ชาย")
+        return "boy-40-yes.html";
+    else if (age === "60" && gender === "ชาย")
+        return "boy-60-yes.html";
+    else if (age === "0" && gender === "หญิง")
+        return "girl-0-yes.html";
+    else if (age === "20" && gender === "หญิง")
+        return "girl-20-yes.html";
+    else if (age === "40" && gender === "หญิง")
+        return "girl-40-yes.html";
+    else if (age === "60" && gender === "หญิง")
+        return "girl-60-yes.html";
+    }
+
+</script>
+<style>
+    body, html {
+      margin: 0;
+    }
+
+    a:link, a:visited {
+      background-color: #DC143C;
+      color: white;
+      padding: 20px 150px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    a:hover, a:active {
+      background-color: red;
+    }
+
+</style>
+<body>
+    <div class="w3-container" style="background-color: white; padding-top: 5px; padding-left: 250px;">
+        <a href="index.html" target="_self" style="padding: 10px 20px; background-color: white">
+            <img src="https://i.ibb.co/9tMvjDL/plussign2.jpg" width="150">
+        </a>
+        <span style="padding-left: 20px">
+        </span>
+        <a href="question.html" target="_self" style="padding: 10px 20px;">
+            <span style="font-family: Kanit; font-size: 20px;">
+                แบบสอบถาม
+            </span>
+        </a>
+        <span style="padding-left: 3px">
+        </span>
+        <a href="calculator.html" target="_self" style="padding: 10px 20px;">
+            <span style="font-family: Kanit; font-size: 20px;">
+                เครื่องคำนวณต่างๆ
+            </span>
+        </a>
+        <span style="padding-left: 3px">
+        </span>
+        <a href="symptom.html" target="_self" style="padding: 10px 20px;">
+            <span style="font-family: Kanit; font-size: 20px;">
+                ความรู้เรื่องโรค
+            </span>
+        </a>
+        <span style="padding-left: 3px">
+        </span>
+        <a href="hospital.html" target="_self" style="padding: 10px 20px;">
+            <span style="font-family: Kanit; font-size: 20px;">
+                โรงพยาบาล
+            </span>
+        </a>
+        <span style="padding-left: 20px">
+        </span>
+        <span style="padding: 18px 70px; background-color: #DC143C; color: white;">
+            <span style="font-family: Kanit; font-size: 20px;">
+                ขอต้อนรับสู่เว็บไซต์ IT HEALTH
+            </span>
+        </span>
+        <span style="padding-left: 20px">
+        </span>
+        <a href="github.html" target="_self" style="padding: 0px 0px; background-color: white">
+            <img src="https://i.ibb.co/0rVnNq9/github.jpg" width="40">
+        </a>
+        <span style="padding-left: 10px">
+        </span>
+        <a href="contact.html" target="_self" style="padding: 0px 0px; background-color: white">
+            <img src="https://i.ibb.co/YfjDMRs/contact.jpg" width="40">
+        </a>
+    </div>
+    <div style="background-color: crimson; padding-top: 175px; padding-bottom: 50px;">
+        <span style="font-family: Kanit; font-size: 50px; color: white; padding-left: 250px">
+                <span style="font-size: 100px">
+                คำถาม :
+                </span>
+                คุณเคยทำแบบสอบถามทางด้านสุขภาพหรือไม่
+            </span>
+    </div>
+    <div style="padding-left: 250px; padding-top: 50px">
+        <a href="javascript:document.location.href=yes();" target="_self" style="padding: 40px 300px;">
+            <span style="font-family: Kanit; font-size: 30px;">
+                เคย
+            </span>
+        </a>
+        <span style="padding-left: 90px">
+        </span>
+        <a href="javascript:document.location.href=no();" target="_self" style="padding: 40px 290px;">
+            <span style="font-family: Kanit; font-size: 30px;">
+                ไม่เคย
+            </span>
+        </a>
+    </div>
+</body>
+</html>
