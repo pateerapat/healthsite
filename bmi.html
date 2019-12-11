@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
+    <title>BMI Calculator</title>
+<script type="text/javascript">
+
+function คำนวณ() {
+    var height = Number(document.getElementById("height").value);
+    var weight = Number(document.getElementById("weight").value);
+        
+    var bmi = (weight/Math.pow(height, 2)*10000);
+        
+    document.getElementById("output").innerText = Math.round(bmi*100)/100;
+        
+    var output = (bmi*100)/100
+    if (output < 16)
+        document.getElementById("comment").innerText = "คุณผอมเกินไป";
+    else if (output >= 16 && output <= 16.9)
+        document.getElementById("comment").innerText = "คุณผอมกว่าปกติ";
+    else if (output > 16.9 && output <= 18.5)
+        document.getElementById("comment").innerText = "คุณผอม";
+    else if (output > 18.5 && output <= 22.9)
+        document.getElementById("comment").innerText = "คุณปกติ";
+    else if (output > 22.9 && output <= 24.9)
+        document.getElementById("comment").innerText = "คุณท้วม";
+    else if (output > 24.9 && output <= 29.9)
+        document.getElementById("comment").innerText = "คุณอ้วน";
+    else if (output > 29.9)
+        document.getElementById("comment").innerText = "คุณอ้วนมาก";
+            }
+</script>
+</head>
+<style>
+    body, html {
+      margin: 0;
+    }
+
+    a:link, a:visited {
+      background-color: #DC143C;
+      color: white;
+      padding: 20px 150px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    a:hover, a:active {
+      background-color: red;
+    }
+</style>
+    <body>
+    <div class="w3-container" style="background-color: white; padding-top: 5px; padding-left: 250px;">
+        <a href="index.html" target="_self" style="padding: 10px 20px; background-color: white">
+            <img src="https://i.ibb.co/9tMvjDL/plussign2.jpg" width="150">
+        </a>
+        <span style="padding-left: 20px">
+        </span>
+        <a href="question.html" target="_self" style="padding: 10px 20px;">
+            <span style="font-family: Kanit; font-size: 20px;">
+                แบบสอบถาม
+            </span>
+        </a>
+        <span style="padding-left: 3px">
+        </span>
+        <a href="calculator.html" target="_self" style="padding: 10px 20px;">
+            <span style="font-family: Kanit; font-size: 20px;">
+                เครื่องคำนวณต่างๆ
+            </span>
+        </a>
+        <span style="padding-left: 3px">
+        </span>
+        <a href="symptom.html" target="_self" style="padding: 10px 20px;">
+            <span style="font-family: Kanit; font-size: 20px;">
+                ความรู้เรื่องโรค
+            </span>
+        </a>
+        <span style="padding-left: 3px">
+        </span>
+        <a href="hospital.html" target="_self" style="padding: 10px 20px;">
+            <span style="font-family: Kanit; font-size: 20px;">
+                โรงพยาบาล
+            </span>
+        </a>
+        <span style="padding-left: 20px">
+        </span>
+        <span style="padding: 18px 70px; background-color: #DC143C; color: white;">
+            <span style="font-family: Kanit; font-size: 20px;">
+                ขอต้อนรับสู่เว็บไซต์ IT HEALTH
+            </span>
+        </span>
+        </a>
+        <span style="padding-left: 20px">
+        </span>
+        <a href="github.html" target="_self" style="padding: 0px 0px; background-color: white">
+            <img src="https://i.ibb.co/0rVnNq9/github.jpg" width="40">
+        </a>
+        <span style="padding-left: 10px">
+        </span>
+        <a href="contact.html" target="_self" style="padding: 0px 0px; background-color: white">
+            <img src="https://i.ibb.co/YfjDMRs/contact.jpg" width="40">
+        </a>
+    </div>
+                <div style="background-color: crimson; padding-top: 150px; padding-left: 200px">
+                    <h1 style="font-family: Kanit; font-size: 50px; color: white; padding-left: 800px">ค่า BMI ของคุณ คือ <span id="output" style="font-size: 100px;">?</span></h1>
+                    <h2 style="font-family: Kanit; font-size: 50px; color: white; padding-left: 800px; margin-top: -50px">นั่นหมายความว่า <span id="comment"> ?</span> </h2>
+                    <img src="https://i.ibb.co/pKgqQ2c/bmi.jpg" width="800" style="margin-top: -250px">
+                </div>
+        <p style="font-family: Kanit; font-size: 20px; padding-left: 500px; padding-top: 20px">ส่วนสูงของคุณ = <input type="text" id="height" size="2" maxlength="3" style="font-family: Kanit; font-size: 25px; text-align:center"/>
+             เซนติเมตร
+        </p>
+        <p style="font-family: Kanit; font-size: 20px; padding-left: 500px; margin-top: -1px">น้ำหนักของคุณ = <input type="text" id="weight" size="2" maxlength="3" style="font-family: Kanit; font-size: 25px; text-align:center;"/>
+            กิโลกรัม
+        </p>
+        <span style="padding-left: 500px">
+        </span>
+        <input style="font-family: Kanit; font-size: 60px; padding: 20px 60px" type="submit" value="คำนวณ" onclick="คำนวณ();">
+    </body>
+</html>
